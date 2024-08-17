@@ -3,10 +3,3 @@
     padding:0;
     box-sizing: border-box;
 }
-.main_box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50lvh;
-    background-color: lightgreen;
-}
