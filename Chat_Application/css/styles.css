@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('images/background.jpg'); /* Add your desired background image here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#chat-app {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#room-list {
+    width: 30%;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Slight transparency for background */
+}
+
+#room-list h2 {
+    margin-top: 0;
+}
+
+#room-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#room-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+#room-list li:hover {
+    background-color: #f0f0f0;
+}
+
+#chat-room {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.8); /* Slight transparency for background */
+}
+
+#current-room {
+    margin-top: 0;
+}
+
+#messages {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#messages div {
+    margin-bottom: 10px;
+}
+
+#message-input {
+    width: calc(100% - 80px);
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#send-message {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#send-message:hover {
+    background-color: #0056b3;
+}

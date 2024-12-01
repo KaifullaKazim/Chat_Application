@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="chat-app">
+        <div id="room-list">
+            <h2>Chat Rooms</h2>
+            <ul id="rooms"></ul>
+            <input type="text" id="new-room" placeholder="New room name">
+            <button id="create-room">Create Room</button>
+        </div>
+        <div id="chat-room">
+            <h2 id="current-room">Select a room</h2>
+            <div id="messages"></div>
+            <input type="text" id="message-input" placeholder="Type a message...">
+            <button id="send-message">Send</button>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
