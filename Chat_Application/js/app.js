@@ -5,16 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const messageInput = document.getElementById('message-input');
     const messagesDiv = document.getElementById('messages');
     const currentRoom = document.getElementById('current-room');
+    const loggedInUser = document.getElementById('logged-in-user');
+
+    let username = '';
 
     socket.addEventListener('open', () => {
         console.log('Connected to WebSocket server');
+        username = prompt('Enter your username:');
+        socket.send(JSON.stringify({ type: 'login', username }));
+        loggedInUser.textContent = `Logged in: ${username}`;
     });
 
     document.getElementById('create-room').addEventListener('click', () => {
         const newRoom = document.getElementById('new-room').value.trim();
         if (newRoom) {
             socket.send(JSON.stringify({ type: 'createRoom', room: newRoom }));
-            addRoomToList(newRoom);
             document.getElementById('new-room').value = '';
         }
     });
@@ -43,16 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
             data.rooms.forEach(room => {
                 addRoomToList(room);
             });
-        } else if (data.type === 'message') {
+        } else if (data.type === 'message' && data.room === currentRoom.textContent) {
             const messageElement = document.createElement('div');
             messageElement.textContent = `[${data.user}] ${data.text}`;
             messagesDiv.appendChild(messageElement);
         }
-    });
-
-    socket.addEventListener('open', () => {
-        const username = prompt('Enter your username:');
-        socket.send(JSON.stringify({ type: 'login', username }));
     });
 
     function addRoomToList(room) {

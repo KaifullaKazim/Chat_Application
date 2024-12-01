@@ -18,6 +18,7 @@ wss.on('connection', (ws) => {
             case 'createRoom':
                 if (!rooms[data.room]) {
                     rooms[data.room] = [];
+                    broadcastRoomList();
                 }
                 break;
             case 'joinRoom':
@@ -32,7 +33,8 @@ wss.on('connection', (ws) => {
                             users[user].send(JSON.stringify({
                                 type: 'message',
                                 user: currentUser,
-                                text: data.text
+                                text: data.text,
+                                room: data.room
                             }));
                         }
                     });
@@ -48,5 +50,14 @@ wss.on('connection', (ws) => {
         }
     });
 });
+
+function broadcastRoomList() {
+    const roomListMessage = JSON.stringify({ type: 'roomList', rooms: Object.keys(rooms) });
+    wss.clients.forEach(client => {
+        if (client.readyState === WebSocket.OPEN) {
+            client.send(roomListMessage);
+        }
+    });
+}
 
 console.log('WebSocket server is running on ws://localhost:8080');
