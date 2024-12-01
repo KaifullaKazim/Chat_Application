@@ -1,7 +1,7 @@
 # Chat Application
 
 ## Description
-A real-time chat application that allows users to join chat rooms and exchange messages in real-time.
+A Fully Responsive real-time chat application that allows users to join chat rooms and exchange messages in real-time.
 
 ## Technologies
 - HTML
