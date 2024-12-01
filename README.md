@@ -19,4 +19,4 @@ A Fully Responsive real-time chat application that allows users to join chat roo
 
 4. Then Open the HTML file in the browser
 5. Open multiple tabs to Log in as different users and see the results.
-6. Open the same group to see the messages on the different tabs without refreshing the page. 
+6. Open the same group on the different logged-in tabs to see the messages without refreshing the page.
