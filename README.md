@@ -16,11 +16,14 @@ A Fully Responsive real-time chat application that allows users to join chat roo
 3. Install dependencies: Type the below command in the terminal 
    ```bash
    npm install ws
+4. Run the following command in the terminal
+   ``` bash
+   node server.js
 
-4. Then Open the HTML file in the browser
-5. Open multiple tabs to Log in as different users and see the results.
-6. Open the same group on the different logged-in tabs to see the messages without refreshing the page.
-7. In this Application you can create Multiple Groups chat in multiple groups
+5. Then Open the HTML file in the browser
+6. Open multiple tabs to Log in as different users and see the results.
+7. Open the same group on the different logged-in tabs to see the messages without refreshing the page.
+8. In this Application you can create Multiple Groups chat in multiple groups
 Some Pictures Below:
 ![image](https://github.com/user-attachments/assets/f15cbb98-2a9b-45c7-a79c-2df6609763c4)
 ![image](https://github.com/user-attachments/assets/4bf70721-bb81-4a68-8ac2-a17130217cb5)
