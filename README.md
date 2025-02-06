@@ -16,7 +16,7 @@ A Fully Responsive real-time chat application that allows users to join chat roo
 3. Install dependencies: Type the below command in the terminal 
    ```bash
    npm install ws
-4. Run the following command in the terminal
+4. Run the following command in the terminal and then follow the next steps
    ``` bash
    node server.js
 
